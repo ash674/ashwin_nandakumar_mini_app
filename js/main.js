@@ -4,14 +4,12 @@ import MiniCard from "./modules/AppCard.js";
 (() => {
 
     let vue_vm = new Vue({
-       
-
         data: {  
-       message: "Mini App",
+          message: "Mini App",
         anotherMessage: "Click on image to see description",
         removeAformat: true,
         showBioData: false,
-        mini: [],
+        miniCars: [],
         currentMiniData: {}
         },
 
@@ -19,7 +17,7 @@ import MiniCard from "./modules/AppCard.js";
         mounted: function() {
             console.log("Vue is mounted, trying a fetch for the initial data");
             
-            fetchData("./includes/index.php").then(data => this.mini = data).catch(err => JSON.parse(JSON.stringify(err)));
+            fetchData("./includes/index.php").then(data => this.miniCars = data).catch(err => JSON.parse(JSON.stringify(err)));
               
         },
 
@@ -39,7 +37,7 @@ import MiniCard from "./modules/AppCard.js";
 
             showMiniData(target) {
                 // remove this prof from the professors array
-                console.log('clicked to view Mini data', target, target.name);
+                console.log('clicked to view Mini data', target, target.model);
                 // the "this" keyword inside a vue instance REFERS to the Vue instance itself by default
 
                 // toggle the property between true and false using a ternary statement
@@ -54,5 +52,5 @@ import MiniCard from "./modules/AppCard.js";
         components: {
             "mini-card": MiniCard
         }
-    }).$mount("#app"); // also connects Vue to your wrapper in HTML
+    }).$mount("#app1"); // also connects Vue to your wrapper in HTML
 })();
