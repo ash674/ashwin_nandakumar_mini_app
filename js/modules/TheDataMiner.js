@@ -22,7 +22,6 @@ async function fetchData(sourceURL) {
 
     return dataset[0];
     
-    debugger;
 }
 
 async function postData(sourceURL) {
