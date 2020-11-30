@@ -19,7 +19,7 @@ import MiniCard from "./modules/AppCard.js";
         mounted: function() {
             console.log("Vue is mounted, trying a fetch for the initial data");
             
-            fetchData("./includes/index.php").then(data => this.mini = data).catch(err => console.error(err));
+            fetchData("./includes/index.php").then(data => this.mini = data).catch(err => JSON.parse(JSON.stringify(err)));
               
         },
 
@@ -53,6 +53,6 @@ import MiniCard from "./modules/AppCard.js";
 
         components: {
             "mini-card": MiniCard
-        },
+        }
     }).$mount("#app"); // also connects Vue to your wrapper in HTML
 })();
