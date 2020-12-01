@@ -1,7 +1,7 @@
 export default {
-    name: "MiniCar",
+    name: "moreContent",
 
-    props: ["mini"],
+    props: ["content"],
 
     // data needs to be a function inside a component
     data: function() {
@@ -13,10 +13,8 @@ export default {
     },
 
     template: 
-    `<li @click="logClicked">
-        <img :src="'images/' + mini.image" :alt='mini.name + " image"'>
-      
-    </li>`,
+    `<h2>Model: {{ currentMiniData.name }}</h2>
+    <p>Description: {{ currentMiniData.description }}</p>`,
     
     created: function () {
         console.log(`created ${this.mini.name}'s card`);

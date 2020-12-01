@@ -13,3 +13,29 @@ body {
 h1 {
     margin-left: 640px;
 }
+
+.imagesDatabase  {
+    display: flex;
+    flex-direction: row;
+} 
+
+.miniCard {
+    display: flex;
+    flex-direction: row;
+.miniImages {
+    margin-left: 10px;
+}
+
+}
+
+
+
+.bio-data{
+    display: none;
+}
+
+
+.show-bio{
+    display: block 
+    !important;
+}
