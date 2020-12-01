@@ -1,30 +1,30 @@
 export default {
-    name: "MiniCard",
+    name: "MiniCar",
 
     props: ["mini"],
 
     // data needs to be a function inside a component
     data: function() {
         return {
-            myName: this.app.name,
-            myRole: this.app.model,
+            myName: this.mini.name,
+            myRole: this.mini.model,
             program: "IDP"
         }
     },
 
     template: 
-    `<li @click="logClicked">
-        <img :src="'images/' + app.image" :alt='app.name + " image"'>
+    `<li>
+        <img :src="'images/' + mini.image" :alt='mini.name + " image"'>
       
     </li>`,
 
     created: function () {
-        console.log(`created ${this.app.name}'s card`);
+        console.log(`created ${this.mini.name}'s card`);
     },
 
     methods: {
         logClicked() {
-            console.log(`fired from inside ${this.app.name}'s component!`);
+            console.log(`fired from inside ${this.mini.name}'s component!`);
         }
     }
 }
