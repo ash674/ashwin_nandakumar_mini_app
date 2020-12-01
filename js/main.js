@@ -1,5 +1,6 @@
 import { fetchData } from "./modules/TheDataMiner.js";
 import MiniCard from "./modules/AppCard.js";
+import moreContent from "./modules/moreContent.js";
 
 (() => {
 
@@ -37,7 +38,7 @@ import MiniCard from "./modules/AppCard.js";
 
             showMiniData(target) {
                 // remove this prof from the professors array
-                console.log('clicked to view Mini data', target, target.model);
+                console.log('clicked to view Mini data', target.name);
                 // the "this" keyword inside a vue instance REFERS to the Vue instance itself by default
 
                 // toggle the property between true and false using a ternary statement
@@ -50,7 +51,8 @@ import MiniCard from "./modules/AppCard.js";
         },
 
         components: {
-            "mini-card": MiniCard
+            "mini-card": MiniCard,
+            "content": moreContent
         }
     }).$mount("#app1"); // also connects Vue to your wrapper in HTML
 })();
