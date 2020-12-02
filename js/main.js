@@ -37,22 +37,18 @@ import moreContent from "./modules/moreContent.js";
             },
 
             showMiniData(target) {
-                // remove this prof from the professors array
-                console.log('clicked to view Mini data', target.name);
-                // the "this" keyword inside a vue instance REFERS to the Vue instance itself by default
+                 console.log('clicked to view Mini data', target.model);
+               
+                  this.showBioData = this.showBioData ? false : true;
 
-                // toggle the property between true and false using a ternary statement
-                this.showBioData = this.showBioData ? false : true;
-
-                // make the selected prof's data visible
-                this.currentMiniData = target;
+                 this.currentMiniData = target;
             }            
 
         },
 
         components: {
             "mini-card": MiniCard,
-            "content": moreContent
+            "content-card": moreContent,
         }
     }).$mount("#app1"); // also connects Vue to your wrapper in HTML
 })();

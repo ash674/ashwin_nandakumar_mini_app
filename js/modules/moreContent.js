@@ -13,18 +13,8 @@ export default {
     },
 
     template: 
-    `<h2>Model: {{ currentMiniData.name }}</h2>
+    `<p>Model: {{ currentMiniData.model }}</p>
     <p>Description: {{ currentMiniData.description }}</p>`,
     
-    created: function () {
-        console.log(`created ${this.mini.name}'s card`);
-    },
-
-    methods: {
-        logClicked() {
-            console.log(`fired from inside ${this.mini.name}'s component!`);
-
-
-        }
-    }
+  
 }
