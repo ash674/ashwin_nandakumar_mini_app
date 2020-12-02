@@ -16,13 +16,15 @@
         <p>{{anotherMessage}}</p>
     </section>
         <section class="miniCard" class="miniLink">
+            <section class="row">
             <!-- this is a custom Vue component defined in main.js -->
          <mini-card v-for="mini in miniCars"  @showmydata='showMiniData' :mini="mini" :key="mini.id" class="miniImages"></mini-card>
-
+        </section>
         <!-- show more section -->
         <section class="bio-data" :class="{'show-bio' : showMiniData}" class="descrip">
             <p>Model: {{ currentMiniData.model }}</p>
             <p>Description: {{ currentMiniData.description}}</p>
+        </section>
         </section>
     </main>
 </body>

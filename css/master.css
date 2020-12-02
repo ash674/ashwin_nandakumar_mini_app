@@ -1,5 +1,6 @@
 body {
   display: flex;
+  flex-direction: column;
   background-image: url("../images/bckgrd.jpg");
   color: #3b215b;
   font-family: Arial, Helvetica, sans-serif;
@@ -13,17 +14,16 @@ h1 {
   margin-left: 640px;
 }
 
-.imagesDatabase {
-  display: flex;
-  flex-direction: row;
-}
-
 .miniCard {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 .miniCard .miniImages {
   margin-left: 10px;
+}
+.miniCard .row {
+  display: flex;
+  flex-direction: row;
 }
 
 .bio-data {
@@ -37,6 +37,7 @@ h1 {
 .descrip p {
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
