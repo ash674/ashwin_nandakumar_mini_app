@@ -37,8 +37,8 @@ import moreContent from "./modules/moreContent.js";
             },
 
             showMiniData(target) {
-                 console.log('clicked to view Mini data', target.model);
-               
+                
+             console.log('clicked to view', target.model);  
                   this.showBioData = this.showBioData ? false : true;
 
                  this.currentMiniData = target;
@@ -48,7 +48,7 @@ import moreContent from "./modules/moreContent.js";
 
         components: {
             "mini-card": MiniCard,
-            "content-card": moreContent,
+         "content-card": moreContent
         }
     }).$mount("#app1"); // also connects Vue to your wrapper in HTML
 })();

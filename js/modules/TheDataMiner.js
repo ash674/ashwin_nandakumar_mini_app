@@ -1,7 +1,7 @@
 let errorCodes = {
     404: "Not found",
     500: "Server connection error",
-    403: "You shall not pass! Unless you have creds. Then sure go ahead.",
+    403: "Error",
     503: "Service unavailable"
 }
 
@@ -9,7 +9,7 @@ async function fetchData(sourceURL) {
         // ask for a resource, and then do something with it when it resolves
     let resource = await fetch(sourceURL).then(response => {
         if (response.status !== 200) {
-            throw new Error(`Danger .... Error ${response.status}: ${errorCodes[response.status]}`);
+            alert(`Danger .... Error ${response.status}: ${errorCodes[response.status]}`);
         } 
         
         return response;           
