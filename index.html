@@ -11,17 +11,16 @@
 </head>
 <body>
     <main id="app1">
+        <section class="header">
         <h1 @click="clickHeader">{{ message }}</h1>
         <p>{{anotherMessage}}</p>
-
-        <section class="miniCard" class="miniLink" @click.prevent="showMiniData(miniCars)" :class="{'mini-button-modifier' : removeAformat}">
-            <!-- this is a custom Vue component defined in main.js -->
-         <a href="" v-for="mini in miniCars" >   <mini-card  :mini="mini" :key="mini.id" class="miniImages"></mini-card>
-
-         </a>  
     </section>
+        <section class="miniCard" class="miniLink">
+            <!-- this is a custom Vue component defined in main.js -->
+         <mini-card v-for="mini in miniCars"  @showmydata='showMiniData' :mini="mini" :key="mini.id" class="miniImages"></mini-card>
+
         <!-- show more section -->
-        <section class="bio-data" :class="{'show-bio' : showBioData}">
+        <section class="bio-data" :class="{'show-bio' : showMiniData}" class="descrip">
             <p>Model: {{ currentMiniData.model }}</p>
             <p>Description: {{ currentMiniData.description}}</p>
         </section>

@@ -20,12 +20,15 @@ export default {
     
     created: function () {
         console.log(`created ${this.mini.model}'s card`);
+        
     },
 
     methods: {
         logClicked() {
+          
             console.log(`fired from inside ${this.mini.model}'s component!`);
-
+            console.log(`${this.mini.description}`);
+            this.$emit('showmydata',this.mini);
 
         }
     }

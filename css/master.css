@@ -5,7 +5,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#app1 p {
+.header p {
   margin-left: 600px;
 }
 
@@ -32,6 +32,12 @@ h1 {
 
 .show-bio {
   display: block !important;
+}
+
+.descrip p {
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=master.css.map */
